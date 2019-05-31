@@ -499,7 +499,7 @@ Next go to Hosted Mender, then *Devices* followed by *Preauthorized*. You should
 Finally, on your BeagleBone, start the Mender client:
 
 ```bash
-sudo systemctl mender start
+sudo systemctl start mender
 ```
 
 Within a few minutes you should see your device in Hosted Mender has moved from preauthorized to accepted (under Devices, then Groups).
