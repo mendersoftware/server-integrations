@@ -9,7 +9,7 @@ See the diagram below for the flow provided by this integration.
 ![Mender Azure Integration Flowchart](images/mender-azure-integration-flowchart.png)
 
 Note that this integration is **only intended as a reference demo**. Adjustments need to be made
-before running it in production to ensure adequate security and automation.
+before running it in production to ensure adequate levels of security and automation.
 
 
 ## Prerequisites
@@ -288,7 +288,7 @@ made an authorization request to Hosted Mender; if so it will show under Pending
 (you might also need to remove it from the *Rejected* tab under Devices, so take a look there as well).
 
 Next run the following commands on the BeagleBone Black to install some dependencies we need for cross-compiling
-the Azure DPS provisioning client (you may skip this if you choose to use the prebuilt client in next section):
+and running the Azure DPS provisioning client:
 
 ```bash
 sudo apt-get update && sudo apt-get install -y git cmake build-essential curl libcurl4-openssl-dev libssl-dev uuid-dev
