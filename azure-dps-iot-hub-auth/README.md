@@ -173,7 +173,7 @@ into a shell variable:
 cd # or change to a temporary working directory
 HOSTED_MENDER_EMAIL=# INSERT YOUR ACCOUNT EMAIL
 HOSTED_MENDER_PASSWORD= #INSERT YOUR ACCOUNT PASSWORD
-CREDENTIALS_ENCODED=$(echo -n “$HOSTED_MENDER_EMAIL:$HOSTED_MENDER_PASSWORD” | base64)
+CREDENTIALS_ENCODED=$(echo -n "$HOSTED_MENDER_EMAIL:$HOSTED_MENDER_PASSWORD" | base64)
 ```
 
 Now we will add these credentials in the right place in the `HttpTrigger1.cs` function.
@@ -182,7 +182,7 @@ to the correct path to the `mender-server-integrations` repository.
 
 ```bash
 cp ~/mender-server-integrations/azure-dps-iot-hub-auth/azure-enrollment-function/HttpTrigger1.cs .
-sed -i “s/REPLACE_WITH_HOSTED_MENDER_CREDENTIALS/$CREDENTIALS_ENCODED/g” HttpTrigger1.cs
+sed -i "s/REPLACE_WITH_HOSTED_MENDER_CREDENTIALS/$CREDENTIALS_ENCODED/g" HttpTrigger1.cs
 ```
 
 Keep the resulting file `HttpTrigger1.cs`, as we will attach it to a device enrollment entry below
