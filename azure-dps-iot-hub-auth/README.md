@@ -182,7 +182,16 @@ to the correct path to the `mender-server-integrations` repository.
 
 ```bash
 cp ~/mender-server-integrations/azure-dps-iot-hub-auth/azure-enrollment-function/HttpTrigger1.cs .
+```
+
+GNU sed (Ubuntu)
+```
 sed -i "s/REPLACE_WITH_HOSTED_MENDER_CREDENTIALS/$CREDENTIALS_ENCODED/g" HttpTrigger1.cs
+```
+
+BSD sed (MacOS)
+```
+sed -i '' "s/REPLACE_WITH_HOSTED_MENDER_CREDENTIALS/$CREDENTIALS_ENCODED/g" HttpTrigger1.cs
 ```
 
 Keep the resulting file `HttpTrigger1.cs`, as we will attach it to a device enrollment entry below
